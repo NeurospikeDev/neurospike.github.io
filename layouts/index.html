@@ -6,7 +6,7 @@
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" role="button">Learn more</a>
+      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" role="button" href="our-mission">Learn more</a>
       {{ .Content }}
     </div>
   </div>
@@ -28,11 +28,13 @@
           <p class="text-justify">Eduspike is an educational neuronal simulation tool that provides a modernised interface for interacting with computational neuron models. Through a powerful visualisation module, built-in IDE and accompanying python library, we provide users a hands on experience with popular models such as the LIF and the Hodgkin Huxley neurons. Modelling computational neurons has never been more intuitive.</p>
         </div>
         <div class="col-lg">
-          <img src="neurospikescreenshot.png" class="rounded img-fluid"/>
+          <video class="rounded img-fluid" autoplay loop muted>
+            <source src="eduspike.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
-  </section>
+  </section>  
   <section class="section section-md section-features border-top">
     <div class="container">
       <div class="row justify-content-space-between align-items-center">
