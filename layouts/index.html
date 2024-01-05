@@ -1,0 +1,60 @@
+{{ define "main" }}
+<section class="section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 text-center">
+      <h1>{{ .Title }}</h1>
+    </div>
+    <div class="col-lg-9 col-xl-8 text-center">
+      <p class="lead">{{ .Params.lead | safeHTML }}</p>
+      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" role="button">Learn more</a>
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-prefooter" }}
+  {{ if site.Params.doks.backgroundDots -}}
+  <div class="d-flex justify-content-start">
+    <div class="bg-dots"></div>
+  </div>
+  {{ end -}}
+  {{ if eq $.Site.Language.LanguageName "English" }}
+  <section class="section section-md section-features">
+    <div class="container">
+      <div class="row justify-content-space-between align-items-center">
+        <div class="col-lg text-justify">
+          <h2 class="h4 text-justify">Introducing EduSpike - A First Step in Reimagining Neural Simulation Tools</h2>
+          <p class="text-justify">Eduspike is an educational neuronal simulation tool that provides a modernised interface for interacting with computational neuron models. Through a powerful visualisation module, built-in IDE and accompanying python library, we provide users a hands on experience with popular models such as the LIF and the Hodgkin Huxley neurons. Modelling computational neurons has never been more intuitive.</p>
+        </div>
+        <div class="col-lg">
+          <img src="neurospikescreenshot.png" class="rounded img-fluid"/>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-md section-features border-top">
+    <div class="container">
+      <div class="row justify-content-space-between align-items-center">
+        <div class="col-lg text-center">
+          <h2 class="h4 text-right">Our Mission</h2>
+          <p class="text-justify">At Neurospike, </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+{{ end }}
+
+{{ define "sidebar-footer" }}
+{{ if site.Params.doks.sectionFooter -}}
+<section class="section section-md container-fluid bg-light">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-7">
+      <h2 class="mt-2">Start building with Doks today</h2>
+      <a class="btn btn-primary rounded-pill px-4 my-2" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}prologue/introduction/" role="button">{{ i18n "get-started" }}</a>
+    </div>
+  </div>
+</section>
+{{ end -}}
+{{ end }}
